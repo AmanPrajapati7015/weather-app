@@ -17,6 +17,9 @@ body{
 #content{
     padding: 60px;
     display: flex;
+    justify-content: space-between;
+    min-height: calc(100vh - 120px);
+    gap: 60px;
     flex-direction: column;
 }
 
@@ -110,7 +113,6 @@ h3{
 
 .bottom{
     display: flex;
-    margin-top: 120px;
     padding-bottom: 30px;
     overflow-x: auto;
 
@@ -150,7 +152,7 @@ h3{
     }
     div.top{
         flex-direction: column;
-        gap: 80px;
+        gap: 60px;
     }
     .top .right{
         align-self: center;
