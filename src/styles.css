@@ -11,21 +11,33 @@ body{
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     padding: 50px;
+    display: flex;
+    flex-direction: column;
 }
 
 
 .small{
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 .medium{
-    font-size: 0.9rem;
+    font-size: 1.2rem;
+}
+h1{
+    font-size: 3rem;
+}
+h2{
+    font-size: 2.5rem;
+}
+
+h3{
+    font-size: 1.6rem;
 }
 
 .top{
     display: flex;
     justify-content: space-between;
 }
-.top .right, .top .left{
+ .top .left{
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -35,6 +47,15 @@ body{
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+.top .left .temp{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#cur-icon{
+    width: 120px;
 }
 
 
@@ -61,17 +82,36 @@ body{
     padding: 0 8px;
 }
 
-
+.top .right{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
 
 .right > div{
     display: flex;
     gap: 10px;
 }
 .right > div > img{
-    width: 30px;
+    width: 35px;
 }
 .right > div >div{
     display: flex;
     flex-direction: column;
     gap: 5px;
+}
+
+
+
+.bottom{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 120px;
+
+}
+.bottom .hour{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
 }
