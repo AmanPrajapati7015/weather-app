@@ -4,15 +4,13 @@ import getforecast from './getDetails';
 import render from './render';
 
 
-
 async function search(city){
-    
-    console.log('start loading');
+    const loading = document.querySelector('.loading');
+    loading.classList.add('active')
     let reqInfo = await getforecast(city);
     console.log(reqInfo);
     render(reqInfo);
-    console.log('stop loading');
-
+    loading.classList.remove('active');
     localStorage.setItem('location', city);
 }
 
@@ -28,7 +26,4 @@ export {search};
 
 
 //Todos
-// 1. make hours scrollable
-// 2. add media qurey for mobiles
 // 2. toggle C and F
-// 3. show loading icon 

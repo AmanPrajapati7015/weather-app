@@ -16,13 +16,15 @@ function getQuerry(){
     cityInput.value = '';
 }
 
+const body = document.getElementById('content');
 
 function render(reqInfo){
-    document.body.innerHTML = '';
+
+    body.innerHTML = '';
     const top = document.createElement('div');
     top.classList.add('top')
     top.innerHTML = makeTop(reqInfo.current);
-    document.body.appendChild(top);
+    body.appendChild(top);
 
     cityInput = document.getElementById('city');
     searchBtn = cityInput.nextElementSibling; 
@@ -35,7 +37,7 @@ function render(reqInfo){
         e.preventDefault();
         bottom.scrollLeft += e.deltaY;
     })
-    document.body.appendChild(bottom);
+    body.appendChild(bottom);
 
 }
 
