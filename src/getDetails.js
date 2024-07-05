@@ -1,6 +1,6 @@
 
 const {API_KEY} = process.env;
-const baseUrl = 'http://api.weatherapi.com/v1/forecast.json';
+const baseUrl = 'https://api.weatherapi.com/v1/forecast.json';
 
 function getReqDetails(res){
     // console.log(res.current.condition);
