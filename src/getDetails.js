@@ -50,6 +50,7 @@ async function getforecast(city){
         const resp = await fetch(url);
         if(resp.status == 400){
             alert('no such city');
+            location.reload();
         }
         else if(resp.status == 200){
             const res = await resp.json();

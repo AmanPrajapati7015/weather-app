@@ -137,6 +137,9 @@ h3{
 
 
 @media (max-width: 600px) {
+    #content{
+        padding: 40px;
+    }
     .bottom {
         flex-direction: column;
     }
@@ -144,6 +147,13 @@ h3{
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+    }
+    div.top{
+        flex-direction: column;
+        gap: 80px;
+    }
+    .top .right{
+        align-self: center;
     }
 }
 
