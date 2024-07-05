@@ -26,7 +26,7 @@ function getReqDetails(res){
     let curHour = new Date(details.current.datetime).getHours()+1;
     let day = 0;
 
-    while(i<8){
+    while(i<24){
         let hourInfo = {};
         if(curHour == 24){
             curHour = 0;
@@ -35,7 +35,7 @@ function getReqDetails(res){
         hourInfo.datetime = res.forecast.forecastday[day].hour[curHour].time;
         hourInfo.temp_c = res.forecast.forecastday[day].hour[curHour].temp_c;
         hourInfo.temp_f = res.forecast.forecastday[day].hour[curHour].temp_f;
-        hourInfo.icon = res.forecast.forecastday[day].day.condition.icon;
+        hourInfo.icon = res.forecast.forecastday[day].hour[curHour].condition.icon;
         details.hour.push(hourInfo);
         i++;
         curHour++;

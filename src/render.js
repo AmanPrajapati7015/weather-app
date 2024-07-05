@@ -28,10 +28,13 @@ function render(reqInfo){
     searchBtn = cityInput.nextElementSibling; 
     searchBtn.addEventListener('click', getQuerry)
 
-
     const bottom = document.createElement('div');
     bottom.classList.add('bottom');
     makeBottom(reqInfo.hour, bottom);
+    bottom.addEventListener('wheel', (e)=>{
+        e.preventDefault();
+        bottom.scrollLeft += e.deltaY;
+    })
     document.body.appendChild(bottom);
 
 }

@@ -25,3 +25,10 @@ else
     search('new delhi');
 
 export {search};
+
+
+//Todos
+// 1. make hours scrollable
+// 2. add media qurey for mobiles
+// 2. toggle C and F
+// 3. show loading icon 
