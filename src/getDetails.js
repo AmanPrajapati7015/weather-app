@@ -45,9 +45,8 @@ function getReqDetails(res){
 
 async function getforecast(city){
     const url = baseUrl+`?key=${API_KEY}&q=${city}&days=3`;
-    console.log(url);
     try{
-        const resp = await fetch(url);
+        const resp = await fetch(url, {type:'cors'});
         if(resp.status == 400){
             alert('no such city');
             location.reload();
