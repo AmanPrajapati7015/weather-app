@@ -7,9 +7,10 @@ function getReqDetails(res){
     const details = {current:{}, hour: []};
 
     //current detials for top-right 
+    console.log(res.location, res.current);
     details.current.text = res.current.condition.text;
     details.current.location = res.location.name+', '+res.location.country;
-    details.current.datetime = res.location.localtime;
+    details.current.datetime = new Date();
     details.current.temp_c = res.current.temp_c;
     details.current.temp_f = res.current.temp_f;
     details.current.icon = res.current.condition.icon;
@@ -23,7 +24,7 @@ function getReqDetails(res){
     details.current.wind_mph = res.current.wind_mph;
 
     let i =0;
-    let curHour = new Date(details.current.datetime).getHours()+1;
+    let curHour = details.current.datetime.getHours()+1;
     let day = 0;
 
     while(i<24){
