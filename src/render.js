@@ -30,6 +30,11 @@ function render(reqInfo, inC){
     cityInput = document.getElementById('city');
     searchBtn = cityInput.nextElementSibling; 
     searchBtn.addEventListener('click', getQuerry);
+    cityInput.addEventListener('keydown', e=>{
+        if(e.key == 'Enter'){
+            getQuerry();
+        }
+    })
 
     const changeUnitBtn = document.getElementById('change-unit');
     changeUnitBtn.addEventListener('click', ()=>{render(reqInfo, !inC)});
